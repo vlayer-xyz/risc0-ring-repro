@@ -1,0 +1,28 @@
+[workspace]
+resolver = "2"
+members = [
+    "rust/guest_wrapper",
+    "rust/host_utils",
+    "rust/guest",
+    "rust/host",
+]
+default-members = [
+    "rust/host",
+]
+
+[workspace.dependencies]
+anyhow = "1.0.91"
+risc0-build = "=1.2.4"
+risc0-zkp = "=1.2.4"
+risc0-zkvm = "=1.2.4"
+bonsai-sdk = "=1.2.4"
+strum = { version = "0.27.1" }
+derivative = { version = "2.2.0" }
+thiserror = { version = "2.0.11" }
+tracing = { version = "0.1.41" }
+tokio = { version = "1.43.0", default-features = false, features = ["rt-multi-thread"] }
+
+call_guest = { path = "rust/guest" }
+call_host = { path = "rust/host" }
+guest_wrapper = { path = "rust/guest_wrapper" }
+host_utils = { path = "rust/host_utils" }

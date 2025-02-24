@@ -1,0 +1,8 @@
+[package]
+name = "call_guest"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+ring = { path = "../../../ring", features = ["alloc"] }
+untrusted = { version = "0.9.0" }
