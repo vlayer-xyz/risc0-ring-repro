@@ -4,5 +4,5 @@ version = "0.1.0"
 edition = "2021"
 
 [dependencies]
-ring = { path = "../../../ring", features = ["alloc"] }
+ring = { version = "0.17.12", features = ["alloc"] }
 untrusted = { version = "0.9.0" }
